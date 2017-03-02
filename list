@@ -1,0 +1,15 @@
+WM: i3
++ i3status
++ i3lock
++ dmenu
+Editor: emacs, leafpad
+File manager: mc
+PDF: qpdfview
+Music: cmus
+Videos: mplayer
+Terminal: rxvt-unicode
+Images: feh, ristretto
+Office: libreoffice
+Torrent: Transmission
+MIDI: timidity
+Misc: kolourpaint, shutter
