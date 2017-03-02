@@ -3,6 +3,7 @@ WM: i3
 + i3lock
 + dmenu
 Editor: emacs, leafpad
+Mail: thunderbird
 File manager: mc
 PDF: qpdfview
 Music: cmus
