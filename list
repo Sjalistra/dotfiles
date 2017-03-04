@@ -5,7 +5,7 @@ WM: i3
 Editor: emacs, leafpad
 Mail: thunderbird
 File manager: mc
-PDF: qpdfview
+PDF: mupdf
 Music: cmus
 Videos: mplayer
 Terminal: rxvt-unicode
