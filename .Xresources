@@ -1,0 +1,5 @@
+URxvt*background: black
+URxvt*foreground: #cacaca
+URxvt*scrollBar: false
+URxvt.font: xft:Liberation Mono:pixelsize=13
+Urxvt.letterSpace: -1

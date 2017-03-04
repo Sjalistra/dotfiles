@@ -30,7 +30,7 @@ font pango:Liberation Mono 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec terminator
+bindsym $mod+Return exec urxvt
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -156,25 +156,16 @@ bar {
         status_command i3status
 }
 
-
-# Utility
-#bindsym $mod+r exec setxkbmap ru
-#bindsym $mod+э exec setxkbmap pl
-bindsym $mod+Shift+w exec i3lock
-
 # Startup
+exec --no-startup-id ~/dualMonitors.sh
 exec --no-startup-id feh --bg-scale ~/.tapetka3.jpg
-exec --no-startup-id shutter
-exec --no-startup-id thunderbird-bin
 exec --no-startup-id setxkbmap pl
-## Unmutes all, sets volume to 100%
-exec --no-startup-id amixer scontrols | grep -oE "'.*'" | awk -F\' \'{print "amixer -c 0 set \""$2"\" unmute 100"}' | sh
 
 # Thinkpad x201
 bindcode 123 exec amixer sset Master 5%+
 bindcode 122 exec amixer sset Master 5%-
 bindcode 121 exec amixer sset Master toggle
-bindcode 156 exec pcmanfm
+bindcode 156 exec i3lock
 
 # Borders
 bindsym $mod+p exec i3-msg border none
@@ -182,3 +173,9 @@ bindsym $mod+Shift+p exec i3-msg border normal
 
 # Scratchpad
 bindsym $mod+Shift+s move scratchpad
+
+# etc.
+#bindsym $mod+r exec setxkbmap ru
+#bindsym $mod+э exec setxkbmap pl
+## Unmutes all, sets volume to 100%
+exec --no-startup-id amixer scontrols | grep -oE "'.*'" | awk -F\' \'{print "amixer -c 0 set \""$2"\" unmute 100"}' | sh
