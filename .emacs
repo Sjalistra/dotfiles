@@ -45,4 +45,4 @@
 (eval-after-load 'company
     '(add-to-list 'company-backends 'company-irony))
 ;; Line numbers
-(global-linum-mode 1)
+(global-linum-mode 0)
