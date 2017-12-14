@@ -4,13 +4,12 @@ WM: i3
 + dmenu
 Editor: emacs, leafpad
 Mail: icedove
-File manager: mc
 PDF: mupdf
-Music: cmus
-Videos: mplayer
+Music: moc
+Videos: mplayer, vlc
 Terminal: rxvt-unicode
 Images: feh, ristretto
 Office: libreoffice
 Torrent: Transmission
 MIDI: timidity
-Misc: kolourpaint, shutter
+Misc: kolourpaint, flameshot
