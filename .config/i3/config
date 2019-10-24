@@ -2,11 +2,9 @@ set $mod Mod4
 floating_modifier $mod
 font pango:Liberation Mono 8
 
-# This font is widely installed, provides lots of unicode glyphs, right-to-left
-# text rendering and scalability on retina/hidpi displays (thanks to pango).
-#font pango:DejaVu Sans Mono 8
+bindcode 141 exec flameshot gui
 
-bindsym $mod+Return exec urxvt
+bindsym $mod+Return exec xfce4-terminal
 bindsym $mod+Shift+q kill
 bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
@@ -37,7 +35,6 @@ bindsym $mod+e layout toggle split
 bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
-#bindsym $mod+d focus child
 
 bindsym $mod+1 workspace 1
 bindsym $mod+2 workspace 2
@@ -86,16 +83,10 @@ bar {
 
 # Startup
 #exec --no-startup-id ~/dualMonitors.sh
-exec --no-startup-id feh --bg-scale ~/.tapetka.jpeg
+exec --no-startup-id xfce4-session
 exec --no-startup-id setxkbmap pl
 exec --no-startup-id xrdb ~/.Xresources
-exec --no-startup-id ~/.skrypty/ssh-agent.sh
-
-# Thinkpad x201
-bindcode 123 exec amixer sset Master 5%+
-bindcode 122 exec amixer sset Master 5%-
-bindcode 121 exec amixer sset Master toggle
-bindcode 156 exec i3lock
+exec --no-startup-id xmodmap ~/.Xmodmap
 
 # Borders
 bindsym $mod+p exec i3-msg border none
@@ -103,9 +94,5 @@ bindsym $mod+Shift+p exec i3-msg border normal
 
 # Scratchpad
 bindsym $mod+Shift+s move scratchpad
-
-# etc.
-#bindsym $mod+r exec setxkbmap ru
-#bindsym $mod+э exec setxkbmap pl
 
 for_window [class="^.*"] border pixel 0

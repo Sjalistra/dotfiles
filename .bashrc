@@ -1,3 +1,4 @@
+#xmodmap ~/.Xmodmap
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
@@ -114,16 +115,12 @@ if ! shopt -oq posix; then
 fi
 fortune
 
-function cd()
-{
-	builtin cd "$*" && ls
-}
+#function cd()
+#{
+#	builtin cd "$*" && ls
+#}
 complete -cf sudo
 
 alias emacs='emacs -nw'
-alias halt='shutdown -h now'
-alias protoman='ssh root@skaza.org'
-alias 6irc='ssh sjal@carrier.6irc.net'
-alias rpi='ssh root@192.168.1.3'
 
 export EDITOR="emacs -nw"
